@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>弱类型语言：不需要进行类型声明</div>
+		<h1>*数据类型</h1>
+		<pre>
+			1.字符串
+				转义字符"\"
+				不管使用单引号还是双引号，请在整个脚本中保持一致
+			2.数值
+			3.布尔值（boolean） true false
+			4.数组
+				var beatles = Array(4);
+				var beatles = Array();//声明
+				beatles[0] = "John";
+				beatles[1] = "Paul";
+				beatles[2] = "George";
+				beatles[3] = "Ringo";
+				var beatles = Array("John","Paul","George","Ringo");
+				var beatles = ["John","Paul","George","Ringo"];
+				var years = [1940,1943,1942,1943];
+				var lemon = ["John",1940,false];//不同类型混合
+				存放数据的首选方式：将数据保存为对象
+				
+			关联数组
+				数组元素下标不必局限于使用整数数字，可以使用字符串
+				var lennon = Array();
+				lennon["name"] = "John";
+				lennon["year"] = 1940;
+				lennon["living"] ="false";
+			不推荐此种写法，这相当于对象属性
+			5.对象
+				与数组类似
+				var lennon = Object();
+				lennon.name = "John";
+				lennon.year = 1940;
+				lennon.living = false;
+				更简洁的方法创建对象
+				var lennnon = {name:"John",year:1940,living:false};			
+		</pre>
+		<h1>*操作</h1>
+		<pre>
+			算关逻位条
+			1.算术操作符
+				var a= 1+1;
+				var feel ="I am feeling" + "happy"
+				还有- * /
+		</pre>
+		<h2>条件语句（condition statement）</h2>
+		<pre>	
+			if(1>2){
+					alert("This world has gone mad");
+				}
+				
+			if(1>2) alert("This world has gone mad");
+			1.比较运算符（> < >= <= == !=）
+				if(a=false){
+					console.log("T");
+				}else
+				{
+					console.log("F");//F
+				}
+				==相等操作符并不是严格相等
+				if(""==false){
+					console.log("居然相等");//VM156:3 居然相等
+				}
+				===执行严格比较，不仅会比较值也会比较类型
+				if(""===false){
+					console.log("居然相等");
+				}else{
+					console.log("确实不相等");//VM195:5 确实不相等
+				}
+			2.逻辑运算符（与&& 或|| 非！）
+			</pre>
+			<h2>循环语句（while for ）</h2>
+			<pre>
+				while循环
+				var count = 1;
+					while (count<11){
+					console.log(count);
+					count++;
+				}
+				do{
+					console.log(count);
+					count++;
+				}while(count<11);
+				
+				总结：initialize
+					while(condition){
+						statements;
+						increment;
+					}
+				for循环
+				for(initial condition; test condition;alter condition){
+					statements;
+				}
+					
+		</pre>
+		
+	</body>
+</html>

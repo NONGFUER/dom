@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>第七章：动态创建标记</title>
+	</head>
+	<body>
+		<h1>动态创建标记</h1>
+		<pre>
+			传统技术：document.write和innerHTML
+					document.write:违背行为与表现分离
+					innerHTML:无法区分“插入”还是“替换”
+			DOM方法：
+					1.createElement
+						document.createElement(nodeName);						
+					2.appendCild
+						parent.appendChild(child);
+					3.createTextNode
+						document.createTextNode(text);
+					4.insertBefore
+						parentElement.insertBefore(newElement,targetElement);
+		</pre>
+	</body>
+</html>

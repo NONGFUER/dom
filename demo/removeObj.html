@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var objArr = [];
+			for(var i = 0;i<4;i++){
+				var name = "obj"+i;
+				var id = "objId"+i;
+				var obj = {
+					"name" : name,
+					"id" : id
+				}
+				objArr.push(obj);
+			}
+			console.log(objArr);
+			var obj1 ={
+				id: "objId1",
+				name: "obj1"
+			}
+			
+			objArr.splice(0,1);
+			console.log(objArr);
+		</script>
+	</body>
+</html>

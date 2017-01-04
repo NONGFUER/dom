@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		/*单个为（，多个为）
+						 
+		 * ((()
+		 * 思路
+		 * 1.第一个‘(’长度为3，
+		 	——>
+		 * 2.‘)’长度为1
+		 * ——>
+		 * 
+		 * 
+		 * */
+		function encodeAll(word){
+			wordArray = word.split("");
+			var word1 =word;
+			var ff = [];
+			for(var i = 0;i<wordArray.length;i++){
+				if(wordArray[i]=="("){
+					var rex =/\(/g;
+				}else if(wordArray[i]==")"){
+					var rex =/\)/g;
+				}else{
+					var rex =eval("/"+wordArray[i]+"/g");
+				}				
+				var wordMatch = word1.match(rex,'g');
+				var len = wordMatch.length;
+				if(len==1){
+				 word =	word.replace(wordArray[i],'(');				
+				ff.push(word.substring(0,1));
+				word = word.substring(1);
+				}else{
+					word =	word.replace(wordArray[i],')');
+					ff.push(word.substring(0,1));
+				word = word.substring(1);
+				}
+			}
+			console.log(ff.join(""));
+			return ff.join("");
+		}
+		encodeAll("(((aacf)");
+	</script>
+	</body>
+	
+</html>

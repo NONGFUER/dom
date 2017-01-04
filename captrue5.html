@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>第五章：最佳实践</title>
+	</head>
+	<body>
+		<h1>最佳实践</h1>
+		<pre>
+			 过去的错误：易学易用，缺乏高水平的质量控制措施
+			 如果要使用javascript,就要确认：这么做会对用户的浏览体验产生怎样的影响
+			 								用户的浏览器不支持Javascript该怎么办
+			 
+			1.平稳退化：确保网页在没有Javascript的情况下正常运行
+			例子：window.open(url,name,features);
+			
+			“javascript:”伪协议(pseudo-protocol)
+				真协议用来在因特网上的计算机之间传输数据包
+				伪协议则是一种非标准化协议。
+				“javascript:”让我们通过一个链接来调用Javascript函数
+				
+			2.渐进增强：一些额外的信息层去包裹原始数据
+			分离JavaScript
+				问题主要出现在内嵌的事件处理函数中
+				把一个事件添加到html文档中的某个元素上
+				 element.event = action
+			3.向后兼容
+			对象检测：检测浏览器对javascript的支持程度
+				    if(!getElementById||!getElementsByTagName) return false;
+				  	使脚本有较好的向后兼容性
+			浏览器嗅探技术（brower sniffung）
+				a.通过提取浏览器供应商提供的信息来解决向后兼容
+				b.风险大的技术：浏览器谎报信息，浏览器版本众多，代码随浏览器版本更新而更新
+				
+			4.性能考虑
+				a.减少搜索次数,在多个函数都会取得一组类似元素的情况下，考虑重构代码，把搜索结果保存在一个全局变量里
+				b.减少文档中的标记数量。过多不必要的标记只会增加DOM树的规模，进而增加遍历时间
+				c.合并和放置脚本：
+								包含脚本：使用外部文件，与标记清晰地分离，便于重用
+								合并脚本：减少加载页面时的请求量
+								放置脚本：将script标签都放到文档末尾，/body之前
+				d.压缩脚本：利用压缩工具将空格与注释删除，文件名中加上.min字样
+							压缩工具：谷歌的Closure Compiler,雅虎的YUI Compressor,JSmin
+							
+				
+				
+				 
+		</pre>
+	</body>
+</html>
