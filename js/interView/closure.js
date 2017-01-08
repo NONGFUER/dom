@@ -1,3 +1,4 @@
+//等我有了label
 const getSecret = (secret) => {
 	return {
 		get: () => secret
